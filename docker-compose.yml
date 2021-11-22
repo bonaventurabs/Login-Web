@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+    nodeapp:
+        build:
+            context: ./app
+        ports:
+            - '3000:3000'
+    db:
+      image: 'postgres'
+      environment:
+        POSTGRES_PASSWORD: '123456'
+        POSTGRES_USER: 'postgres'
+      volumes:
+        - data:/var/lib/postgresql/data
+    nginx:
+        restart: always
+        build:
+            context: ./nginx
+        ports:
+            - '80:80'
+
+volumes:
+  data:

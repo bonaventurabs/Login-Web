@@ -1,0 +1,19 @@
+{
+  "name": "loginweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "express.js": "^1.0.0",
+    "knex": "^0.95.14",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
+  }
+}
